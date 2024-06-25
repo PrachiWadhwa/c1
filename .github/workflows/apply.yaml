@@ -50,6 +50,11 @@ jobs:
         with:
           terraform_version: 1.1.0
 
+      - name: Print Inputs for Debugging
+        run: |
+          echo "Action: ${{ github.event.inputs.action }}"
+          echo "Dashboard Name: ${{ github.event.inputs.dashboard_name }}"
+
       - name: Set Dashboard Name
         run: echo "dashboard_name=${{ github.event.inputs.dashboard_name }}" >> $GITHUB_ENV
 
