@@ -1,5 +1,5 @@
 resource "newrelic_one_dashboard" "exampledash" {
-  name        = "New Relic Terraform Example"
+  name        = "NewRelicTerraformExample"
   permissions = "public_read_only"
 
   page {
