@@ -64,7 +64,8 @@ jobs:
         run: terraform init
 
       - name: Terraform Plan Destroy
-        run: terraform plan -destroy -target="newrelic_dashboard.${{ env.dashboard_name }}"
+        run: terraform plan -destroy 
 
       - name: Terraform Destroy
-        run: terraform destroy -auto-approve -target="newrelic_dashboard.${{ env.dashboard_name }}"
+        run: terraform destroy -auto-approve 
+# -target="newrelic_dashboard.${{ env.dashboard_name }}" target="newrelic_dashboard.${{ env.dashboard_name }}"
