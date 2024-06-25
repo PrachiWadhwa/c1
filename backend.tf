@@ -3,6 +3,6 @@ terraform {
     bucket         ="forci"
     key            ="terraform.tfstate"
     region         ="ap-south-1"
-  dynamodb_table   ="forcid"
+  dynamodb_table   ="forcidbi"
   }
 }

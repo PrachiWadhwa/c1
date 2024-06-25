@@ -60,8 +60,8 @@ jobs:
       - name: Set Dashboard Name
         run: echo "dashboard_name=${{ github.event.inputs.dashboard_name }}" >> $GITHUB_ENV
 
-      # - name: Terraform Init
-      #   run: terraform init
+      - name: Terraform Init
+        run: terraform init
 
       - name: Terraform Plan Destroy
         run: terraform plan -destroy -target="newrelic_dashboard.${{ env.dashboard_name }}"
