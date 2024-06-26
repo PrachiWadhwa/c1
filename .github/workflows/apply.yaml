@@ -34,6 +34,11 @@ jobs:
         id: init
         run: terraform init
 
+      - name: Debug Inputs
+        run: |
+          echo "Action: ${{ github.event.inputs.action }}"
+          echo "Dashboard Name: ${{ github.event.inputs.dashboard_name }}"
+
       - name: Terraform Plan
         id: plan
         if: ${{ github.event.inputs.action == 'apply' }}
