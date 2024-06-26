@@ -50,8 +50,8 @@ jobs:
 
       - name: Terraform Plan Destroy
         if: ${{ github.event.inputs.action == 'destroy' && github.event.inputs.dashboard_name != '' }}
-        run: terraform plan -destroy -target="newrelic_dashboard.${{ github.event.inputs.dashboard_name }}"
-
+        run: terraform plan -destroy 
+        
       - name: Terraform Destroy
         if: ${{ github.event.inputs.action == 'destroy' && github.event.inputs.dashboard_name != '' }}
-        run: terraform destroy -auto-approve -target="newrelic_dashboard.${{ github.event.inputs.dashboard_name }}"
+        run: terraform destroy -auto-approve 
